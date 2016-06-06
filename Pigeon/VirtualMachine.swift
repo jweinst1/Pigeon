@@ -14,4 +14,17 @@ class VirtualMachine {
     var oper:String?
     var r1:PigWrapper?
     var r2:PigWrapper?
+    var mode:MachineMode
+    
+    init(){
+        self.mode = MachineMode.opr1
+    }
+}
+
+//union of associated machine mode types to keep track of the vm state
+enum MachineMode {
+    case opr1
+    case op
+    case r2
+    case exec
 }

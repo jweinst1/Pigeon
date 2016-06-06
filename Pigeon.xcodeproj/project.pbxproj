@@ -12,6 +12,7 @@
 		031D2D231D050E810058BC1A /* regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D2D221D050E810058BC1A /* regex.swift */; };
 		031D2D261D0541BB0058BC1A /* Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D2D251D0541BB0058BC1A /* Wrappers.swift */; };
 		031D2D281D05590E0058BC1A /* VirtualMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D2D271D05590E0058BC1A /* VirtualMachine.swift */; };
+		6660A6B21D05F0EF00704E8F /* SymbolSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660A6B11D05F0EF00704E8F /* SymbolSets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		031D2D221D050E810058BC1A /* regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = regex.swift; sourceTree = "<group>"; };
 		031D2D251D0541BB0058BC1A /* Wrappers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrappers.swift; sourceTree = "<group>"; };
 		031D2D271D05590E0058BC1A /* VirtualMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualMachine.swift; sourceTree = "<group>"; };
+		6660A6B11D05F0EF00704E8F /* SymbolSets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolSets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				031D2D221D050E810058BC1A /* regex.swift */,
 				031D2D251D0541BB0058BC1A /* Wrappers.swift */,
 				031D2D271D05590E0058BC1A /* VirtualMachine.swift */,
+				6660A6B11D05F0EF00704E8F /* SymbolSets.swift */,
 			);
 			path = Pigeon;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6660A6B21D05F0EF00704E8F /* SymbolSets.swift in Sources */,
 				031D2D1A1D050D890058BC1A /* main.swift in Sources */,
 				031D2D281D05590E0058BC1A /* VirtualMachine.swift in Sources */,
 				031D2D261D0541BB0058BC1A /* Wrappers.swift in Sources */,
@@ -255,6 +259,7 @@
 				031D2D1F1D050D890058BC1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
