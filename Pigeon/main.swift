@@ -8,13 +8,14 @@
 
 import Foundation
 
+//class wrapper around pig value allows values to be called from collections
 var test = PigValue()
-var dict = [String:PigValue]()
+var dict = [String:PigWrapper]()
+dict["soo"] = PigWrapper(val: test)
 
+MakeValue.parsePigValue(&dict["soo"]!.pig, string: "42")
 
-MakeValue.parsePigValue(&test, string: "\"fooo\"")
+print(dict["soo"]!.pig.int!)
 
-dict["doo"] = test
-print(dict["doo"]!.string!)
 
 
