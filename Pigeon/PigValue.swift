@@ -42,7 +42,7 @@ class MakeValue {
             case "{}":
                 pig.map = [String:PigValue]()
             default:
-                print("Syntax Error")
+                pig.string = "Syntax Error"
             }
         }
     }

@@ -29,6 +29,10 @@ class VirtualMachine {
                 if symbolsets.prefixopers.contains(instruc) {
                     oper = instruc
                 }
+                else {
+                    let newpig = PigWrapper(val:PigValue())
+                    MakeValue.parsePigValue(&newpig.pig, string: instruc)
+                }
             default:
                 print("Syntax Error")
             }
