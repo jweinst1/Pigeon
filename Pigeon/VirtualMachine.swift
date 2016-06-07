@@ -14,10 +14,25 @@ class VirtualMachine {
     var oper:String?
     var r1:PigWrapper?
     var r2:PigWrapper?
+    var r3:PigWrapper?
     var mode:MachineMode
     
     init(){
         self.mode = MachineMode.opr1
+    }
+    
+    func compile(input:String) -> Void {
+        let code = input.matchesForRegexInText("\".*?\"|[^ ]+")
+        for instruc in code {
+            switch self.mode {
+            case .opr1:
+                if symbolsets.prefixopers.contains(instruc) {
+                    oper = instruc
+                }
+            default:
+                print("Syntax Error")
+            }
+        }
     }
 }
 

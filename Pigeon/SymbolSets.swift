@@ -10,5 +10,6 @@ import Foundation
 //file for recognizing opers
 
 class symbolsets {
-    static let opers:Set<String> = ["+", "-", "*", "/", "%"]
+    static let infixopers:Set<String> = ["+", "-", "*", "/", "%"]
+    static let prefixopers:Set<String> = ["print"]
 }
