@@ -20,19 +20,20 @@ func - (a:PigValue, b:PigValue) -> PigValue {
     return newpig
 }
 
-func * (a:PigWrapper, b:PigWrapper) -> PigWrapper {
-    let newpig = PigWrapper(val: PigValue())
-    newpig.pig.int = a.pig.int! * b.pig.int!
+func * (a:PigValue, b:PigValue) -> PigValue {
+    let newpig = PigValue()
+    newpig.int = a.int! * b.int!
     return newpig
 }
 
-func / (a:PigWrapper, b:PigWrapper) -> PigWrapper {
-    let newpig = PigWrapper(val: PigValue())
-    newpig.pig.int = a.pig.int! / b.pig.int!
+func / (a:PigValue, b:PigValue) -> PigValue {
+    let newpig = PigValue()
+    newpig.int = a.int! / b.int!
     return newpig
 }
-func % (a:PigWrapper, b:PigWrapper) -> PigWrapper {
-    let newpig = PigWrapper(val: PigValue())
-    newpig.pig.int = a.pig.int! % b.pig.int!
+
+func % (a:PigValue, b:PigValue) -> PigValue {
+    let newpig = PigValue()
+    newpig.int = a.int! % b.int!
     return newpig
 }
