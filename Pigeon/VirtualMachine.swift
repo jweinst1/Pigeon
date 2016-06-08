@@ -51,12 +51,13 @@ class VirtualMachine {
                 mode = MachineMode.exec
             case .exec:
                 if r1 != nil && r2 != nil {
-                    
+                    r3 = InFixOps.math[oper!]!(r1!, r2!)
                 }
             default:
                 print("Syntax Error")
             }
         }
+        print(r3!)
     }
 }
 
