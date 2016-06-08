@@ -7,9 +7,14 @@
 //
 
 import Foundation
-let v = VirtualMachine()
+let f = PigWrapper(val:PigValue())
+f.pig.int = 6
+let a = PigWrapper(val:PigValue())
+f.pig.int = 3
 
-v.compile("h u u \"ff   f\"")
+
+
+
 
 
 
