@@ -21,7 +21,7 @@ class PigValue {
 
 class MakeValue {
     
-    static func parsePigValue(inout pig:PigValue, string:String) {
+    static func parsePigValue(inout pig:PigValue, string:String, vm:VirtualMachine) {
         //parses as string into the pigval
         if string.matchPattern("\".*?\"") {
             pig.string = string.shaveEnds()
@@ -33,6 +33,8 @@ class MakeValue {
             //proceeds to switch cases for literal values
         else {
             switch string {
+            case "~r":
+                pig = vm.r3!
             case "true", "True":
                 pig.bool = true
             case "false", "False":

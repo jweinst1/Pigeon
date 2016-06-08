@@ -27,7 +27,7 @@ class VirtualMachine {
             switch self.mode {
             case .r1:
                 var newpig = PigValue()
-                MakeValue.parsePigValue(&newpig, string: instruc)
+                MakeValue.parsePigValue(&newpig, string: instruc, vm:self)
                 r1 = newpig
                 mode = MachineMode.op
             case .op:
@@ -40,7 +40,7 @@ class VirtualMachine {
                 }
             case .r2:
                 var newpig = PigValue()
-                MakeValue.parsePigValue(&newpig, string: instruc)
+                MakeValue.parsePigValue(&newpig, string: instruc, vm:self)
                 r2 = newpig
                 self.execute()
                 //restarts state after execution
