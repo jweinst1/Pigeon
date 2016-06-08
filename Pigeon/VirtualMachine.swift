@@ -12,9 +12,9 @@ import Foundation
 
 class VirtualMachine {
     var oper:String?
-    var r1:PigWrapper?
-    var r2:PigWrapper?
-    var r3:PigWrapper?
+    var r1:PigValue?
+    var r2:PigValue?
+    var r3:PigValue?
     var mode:MachineMode
     
     init(){
@@ -28,13 +28,15 @@ class VirtualMachine {
             case .opr1:
                 if symbolsets.prefixopers.contains(instruc) {
                     oper = instruc
+                    print(oper!)
                     mode = MachineMode.r1
                 }
                 else {
-                    let newpig = PigWrapper(val:PigValue())
-                    MakeValue.parsePigValue(&newpig.pig, string: instruc)
+                    var newpig = PigValue()
+                    MakeValue.parsePigValue(&newpig, string: instruc)
                     r1 = newpig
                     mode = MachineMode.op
+                    print(r1!.int)
                 }
             case .op:
                 if symbolsets.infixopers.contains(instruc) {
@@ -45,8 +47,8 @@ class VirtualMachine {
                     print("Syntax Error")
                 }
             case .r2:
-                let newpig = PigWrapper(val:PigValue())
-                MakeValue.parsePigValue(&newpig.pig, string: instruc)
+                var newpig = PigValue()
+                MakeValue.parsePigValue(&newpig, string: instruc)
                 r2 = newpig
                 mode = MachineMode.exec
             case .exec:

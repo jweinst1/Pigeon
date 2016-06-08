@@ -7,8 +7,9 @@
 //
 
 import Foundation
-let f = VirtualMachine()
-f.compile("5 + 5")
+let a = VirtualMachine()
+a.compile("5 + 5")
+
 
 
 

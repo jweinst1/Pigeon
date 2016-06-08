@@ -10,7 +10,7 @@ import Foundation
 
 //basic dynamic value that the pigeon language operates on
 
-struct PigValue {
+class PigValue {
     var fn:((inout arg:PigValue) ->())?
     var int:Int?
     var string:String?

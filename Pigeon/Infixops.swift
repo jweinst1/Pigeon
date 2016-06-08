@@ -12,10 +12,7 @@ import Foundation
 
 class InFixOps {
     static let math = [
-        "+":{(a:PigWrapper, b:PigWrapper) -> PigWrapper in a + b},
-        "-":{(a:PigWrapper, b:PigWrapper) -> PigWrapper in a - b},
-        "*":{(a:PigWrapper, b:PigWrapper) -> PigWrapper in a * b},
-        "/":{(a:PigWrapper, b:PigWrapper) -> PigWrapper in a / b},
-        "%":{(a:PigWrapper, b:PigWrapper) -> PigWrapper in a % b}
+        "+":{(a:PigValue, b:PigValue) -> PigValue in a + b},
+        "-":{(a:PigValue, b:PigValue) -> PigValue in a - b}
     ]
 }
