@@ -17,6 +17,28 @@ class PigValue {
     var bool:Bool?
     var list:[PigValue]?
     var map:[String:PigValue]?
+    
+    func printval() -> Void {
+        if let val = int {
+            print(val)
+        }
+        else if let val = string {
+            print(val)
+        }
+        else if let val = bool {
+            print(val)
+        }
+        else if let val = list {
+            if val.isEmpty {
+                print("[]")
+            }
+            else {
+                for elem in val {
+                    elem.printval()
+                }
+            }
+        }
+    }
 }
 
 class MakeValue {
