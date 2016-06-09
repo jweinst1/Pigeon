@@ -8,7 +8,8 @@
 
 import Foundation
 let a = VirtualMachine()
-a.compile("5 + 5 ~r - 4")
+a.compile("5 + 5 ~r + 4 ~r + 4 ~r + 6 ~r print 0")
+//24
 
 
 

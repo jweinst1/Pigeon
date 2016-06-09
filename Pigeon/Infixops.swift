@@ -18,5 +18,7 @@ class InFixOps {
         "/":{(a:PigValue, b:PigValue) -> PigValue in a / b},
         "%":{(a:PigValue, b:PigValue) -> PigValue in a % b}
     ]
-    
+    static let voids = [
+        "print":{(a:PigValue, b:PigValue) in a.printval()}
+    ]
 }

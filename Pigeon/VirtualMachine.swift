@@ -47,12 +47,14 @@ class VirtualMachine {
                 mode = MachineMode.r1
             }
         }
-        print(r3!.int!)
     }
     func execute() -> Void {
         if r1 != nil && r2 != nil {
             if let opfunc = InFixOps.math[oper!] {
                 r3 = opfunc(r1!, r2!)
+            }
+            else if let opfunc = InFixOps.voids[oper!] {
+                opfunc(r1!, r2!)
             }
         }
     }
