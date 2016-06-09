@@ -52,6 +52,10 @@ class MakeValue {
         else if let integer = Int(string) {
             pig.int = integer
         }
+            //parsing for names
+        else if string.matchPattern("^@.+") {
+            pig.string = string
+        }
             //proceeds to switch cases for literal values
         else {
             switch string {

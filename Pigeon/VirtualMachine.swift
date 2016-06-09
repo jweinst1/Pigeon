@@ -16,9 +16,12 @@ class VirtualMachine {
     var r2:PigValue?
     var r3:PigValue?
     var mode:MachineMode
+    var variables:[String:PigValue]
     
     init(){
         self.mode = MachineMode.r1
+        //dictionary to store variables
+        self.variables = [String:PigValue]()
     }
     
     func compile(input:String) -> Void {
@@ -55,6 +58,9 @@ class VirtualMachine {
             }
             else if let opfunc = InFixOps.voids[oper!] {
                 opfunc(r1!, r2!)
+            }
+            else if r1!.string!.characters.first == "@" && oper == "=" {
+                variables[r1!.string!] = r2!
             }
         }
     }
